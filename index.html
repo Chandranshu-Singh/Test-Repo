@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillShare - Connect, Learn, Grow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SkillShare</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#providers" class="nav-link">Providers</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-auth">
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Learn Skills from Experts</h1>
+                <p class="hero-subtitle">Connect with skilled professionals and hobbyists to learn new skills through personalized sessions. From programming to cooking, discover your next passion.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large">Find Skills</button>
+                    <button class="btn btn-outline btn-large">Become a Provider</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">Active Learners</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1,000+</span>
+                        <span class="stat-label">Skill Providers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Skill Categories</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/40" alt="Provider" class="provider-avatar">
+                        <div class="provider-info">
+                            <h4>Sarah Chen</h4>
+                            <p>Web Development Expert</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <p>"Learn React.js from scratch in just 4 sessions!"</p>
+                    <div class="card-footer">
+                        <span class="price">$45/session</span>
+                        <button class="btn btn-small">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Categories -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Skill Categories</h2>
+                <p>Discover skills across various domains and find the perfect match for your learning goals</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>Programming, Design, Data Science, AI/ML</p>
+                    <span class="skill-count">2,500+ providers</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Creative Arts</h3>
+                    <p>Music, Art, Writing, Photography</p>
+                    <span class="skill-count">1,800+ providers</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business Skills</h3>
+                    <p>Marketing, Finance, Leadership</p>
+                    <span class="skill-count">1,200+ providers</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Life Skills</h3>
+                    <p>Cooking, Fitness, Language Learning</p>
+                    <span class="skill-count">900+ providers</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Professional Dev</h3>
+                    <p>Public Speaking, Project Management</p>
+                    <span class="skill-count">600+ providers</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h3>View All</h3>
+                    <p>Explore our complete skill directory</p>
+                    <span class="skill-count">50+ categories</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Get started with skill sharing in three simple steps</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Discover Skills</h3>
+                    <p>Browse through our extensive collection of skills and find the perfect match for your learning goals.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Book Sessions</h3>
+                    <p>Schedule sessions with verified skill providers at times that work for you.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Learn & Grow</h3>
+                    <p>Join interactive sessions, track your progress, and build your skill portfolio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Providers -->
+    <section id="providers" class="providers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Skill Providers</h2>
+                <p>Learn from verified experts in their fields</p>
+            </div>
+            <div class="providers-grid">
+                <div class="provider-card">
+                    <div class="provider-header">
+                        <img src="https://via.placeholder.com/80" alt="Provider" class="provider-avatar">
+                        <div class="provider-info">
+                            <h3>Alex Rodriguez</h3>
+                            <p>Full-Stack Developer</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (127 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="provider-bio">10+ years experience in web development. Specializes in React, Node.js, and cloud architecture.</p>
+                    <div class="provider-skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                    <div class="provider-footer">
+                        <span class="price">$60/session</span>
+                        <button class="btn btn-primary">View Profile</button>
+                    </div>
+                </div>
+                <div class="provider-card">
+                    <div class="provider-header">
+                        <img src="https://via.placeholder.com/80" alt="Provider" class="provider-avatar">
+                        <div class="provider-info">
+                            <h3>Maria Santos</h3>
+                            <p>UX/UI Designer</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (89 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="provider-bio">Creative designer with expertise in user experience, interface design, and design systems.</p>
+                    <div class="provider-skills">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe XD</span>
+                        <span class="skill-tag">Prototyping</span>
+                    </div>
+                    <div class="provider-footer">
+                        <span class="price">$55/session</span>
+                        <button class="btn btn-primary">View Profile</button>
+                    </div>
+                </div>
+                <div class="provider-card">
+                    <div class="provider-header">
+                        <img src="https://via.placeholder.com/80" alt="Provider" class="provider-avatar">
+                        <div class="provider-info">
+                            <h3>David Kim</h3>
+                            <p>Data Scientist</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (156 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="provider-bio">PhD in Statistics with expertise in machine learning, data analysis, and Python programming.</p>
+                    <div class="provider-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Statistics</span>
+                    </div>
+                    <div class="provider-footer">
+                        <span class="price">$70/session</span>
+                        <button class="btn btn-primary">View Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Learning?</h2>
+                <p>Join thousands of learners who are already building their skills with SkillShare</p>
+                <button class="btn btn-primary btn-large">Get Started Today</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>SkillShare</span>
+                    </div>
+                    <p>Connecting learners with skilled professionals to create a world of continuous learning and growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Skill Categories</a></li>
+                        <li><a href="#">Provider Directory</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkillShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
