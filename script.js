@@ -357,6 +357,126 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.background = '#667eea';
     });
     
+    // FAQ Accordion Functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            
+            // Toggle answer visibility
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+
+    // Password Strength Indicator
+    const passwordInput = document.getElementById('password');
+    const strengthFill = document.getElementById('strengthFill');
+    const strengthText = document.getElementById('strengthText');
+    
+    if (passwordInput && strengthFill && strengthText) {
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            let strength = 0;
+            
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            
+            let strengthClass = '';
+            let strengthLabel = '';
+            
+            if (strength <= 2) {
+                strengthClass = 'weak';
+                strengthLabel = 'Weak';
+            } else if (strength <= 3) {
+                strengthClass = 'medium';
+                strengthLabel = 'Medium';
+            } else {
+                strengthClass = 'strong';
+                strengthLabel = 'Strong';
+            }
+            
+            strengthFill.className = `strength-fill ${strengthClass}`;
+            strengthText.textContent = strengthLabel;
+        });
+    }
+
+    // Password Toggle Visibility
+    const passwordToggles = document.querySelectorAll('.password-toggle');
+    
+    passwordToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const input = this.previousElementSibling;
+            const icon = this.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.className = 'fas fa-eye-slash';
+            } else {
+                input.type = 'password';
+                icon.className = 'fas fa-eye';
+            }
+        });
+    });
+
+    // Account Type Selection (Sign Up Page)
+    const accountTypeRadios = document.querySelectorAll('input[name="accountType"]');
+    const learnerSkills = document.getElementById('learnerSkills');
+    const providerSkills = document.getElementById('providerSkills');
+    
+    if (accountTypeRadios.length > 0 && learnerSkills && providerSkills) {
+        accountTypeRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'learner') {
+                    learnerSkills.style.display = 'block';
+                    providerSkills.style.display = 'none';
+                } else {
+                    learnerSkills.style.display = 'none';
+                    providerSkills.style.display = 'block';
+                }
+            });
+        });
+    }
+
+    // Form Validation and Submission
+    const signupForm = document.getElementById('signupForm');
+    const loginForm = document.getElementById('loginForm');
+    const contactForm = document.getElementById('contactForm');
+    
+    if (signupForm) {
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your signup logic here
+            alert('Sign up form submitted! (This is a demo)');
+        });
+    }
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your login logic here
+            alert('Login form submitted! (This is a demo)');
+        });
+    }
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your contact form logic here
+            alert('Contact form submitted! (This is a demo)');
+        });
+    }
+
     console.log('Skill Sharing Platform initialized successfully!');
 });
 
