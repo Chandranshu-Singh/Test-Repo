@@ -15,31 +15,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Smooth Scrolling for Navigation Links
+    // Smooth Scrolling for Navigation Links (only for same-page anchors)
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
+            // Only handle same-page anchor links
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
                 
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (hamburger.classList.contains('active')) {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    navAuth.classList.remove('active');
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (hamburger.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        navAuth.classList.remove('active');
+                    }
                 }
             }
+            // External links will work normally
         });
     });
     
@@ -480,44 +484,4 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Skill Sharing Platform initialized successfully!');
 });
 
-// Add CSS for mobile navigation
-const mobileNavStyles = document.createElement('style');
-mobileNavStyles.textContent = `
-    @media (max-width: 768px) {
-        .nav-menu.active,
-        .nav-auth.active {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-top: 1px solid #e2e8f0;
-        }
-        
-        .nav-menu.active {
-            gap: 1rem;
-        }
-        
-        .nav-auth.active {
-            gap: 0.5rem;
-            padding-top: 0;
-        }
-        
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
-    }
-`;
-document.head.appendChild(mobileNavStyles);
+// Mobile navigation styles are now handled in CSS

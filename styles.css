@@ -149,6 +149,55 @@ p {
     transition: 0.3s;
 }
 
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu,
+    .nav-auth {
+        display: none;
+    }
+    
+    .nav-menu.active,
+    .nav-auth.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #e2e8f0;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        gap: 1rem;
+    }
+    
+    .nav-auth.active {
+        gap: 0.5rem;
+        padding-top: 0;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
@@ -925,6 +974,11 @@ p {
     text-align: center;
 }
 
+.about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .about-hero h1 {
     color: white;
     margin-bottom: 1rem;
@@ -1136,6 +1190,11 @@ p {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-align: center;
+}
+
+.contact-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .contact-hero h1 {
@@ -1370,6 +1429,11 @@ p {
     text-align: center;
 }
 
+.signup-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .signup-hero h1 {
     color: white;
     margin-bottom: 1rem;
@@ -1600,6 +1664,11 @@ p {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-align: center;
+}
+
+.login-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .login-hero h1 {
@@ -1929,4 +1998,46 @@ p {
     .skill-card, .provider-card {
         padding: 1.5rem;
     }
+}
+
+/* Checkbox Styling */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #cbd5e1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.checkbox-label:hover .checkmark {
+    border-color: #3b82f6;
 }
