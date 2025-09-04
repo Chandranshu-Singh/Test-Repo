@@ -1,7 +1,7 @@
 // Skill Sharing Platform - Interactive JavaScript with Backend Integration
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://skillshare-backend-ugri.onrender.com/api';
 
 // API Utility Functions
 const api = {
