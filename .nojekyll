@@ -1,0 +1,2 @@
+# This file tells GitHub Pages not to process files with Jekyll
+# It prevents Liquid syntax errors in node_modules and other files
