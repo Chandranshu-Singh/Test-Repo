@@ -107,10 +107,10 @@ const startServer = async () => {
     try {
         await connectDB();
         
-        const server = app.listen(PORT, '127.0.0.1', () => {
+        const server = app.listen(PORT, '0.0.0.0', () => {
             console.log(`🚀 SkillShare Backend Server running on port ${PORT}`);
             console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
-            console.log(`🔗 Health check: http://localhost:${PORT}/health`);
+            console.log(`🔗 Health check: http://0.0.0.0:${PORT}/health`);
         });
         
         server.on('error', (error) => {
